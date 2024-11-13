@@ -14,10 +14,15 @@ Route::middleware(['auth'])->get('/dashboard', function () {
 })->name('dashboard');
 
 // Routes for each form type
-Route::middleware(['auth'])->get('/forms/attendance', [FormController::class, 'showAttendanceForm'])->name('forms.attendance');
-Route::middleware(['auth'])->get('/forms/itinerary', [FormController::class, 'showItineraryForm'])->name('forms.itinerary');
-Route::middleware(['auth'])->get('/forms/reimbursement', [FormController::class, 'showReimbursementForm'])->name('forms.reimbursement');
+Route::post('/forms/attendance/submit', [FormController::class, 'submitAttendance'])->name('forms.attendance.submit');
 
+Route::post('/forms/itinerary/submit', [FormController::class, 'submitItinerary'])->name('forms.itinerary.submit');
+
+Route::post('/forms/reimbursement/submit', [FormController::class, 'submitReimbursement'])->name('forms.reimbursement.submit');
+
+Route::post('/forms/gatepass/submit', [FormController::class, 'submitGatePass'])->name('forms.gatepass.submit');
+
+Route::post('/forms/excuse/submit', [FormController::class, 'submitExcuse'])->name('forms.excuse.submit');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
