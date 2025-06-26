@@ -14,7 +14,7 @@
 
     @section('content')
         <div class="container mt-5">
-            <h1 class="text-center mb-4" style="font-family: 'Helvetica', sans-serif; font-size: 50px; color: #000099;">GAISANO CAPITAL CORP</h1>
+            <h1 class="text-center mb-4" style="font-family: 'Helvetica', sans-serif; font-size: 50px; color: #000099;">Fast Distribution Corporation</h1>
 
             <p class="text-center text-muted">Choose a form to fill out below:</p> <br>
     

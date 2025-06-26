@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ListOfDataController;
 use Illuminate\Support\Facades\Route;
 
 
