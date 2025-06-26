@@ -11,33 +11,38 @@ use Illuminate\Http\Request;
 
 class ListOfDataController extends Controller
 {
-    public function showAtt()
+    public function index()
     {
-        $attData = Attendance::all();
-        return response()->json($attData); // Return data as JSON
+        return view('data.index');
     }
 
-    public function showItn()
+    public function showAttendance()
     {
-        $itnData = Itinerary::all();
-        return response()->json($itnData);
+        $attendances = Attendance::orderBy('created_at', 'desc')->get();
+        return view('data.attendance', compact('attendances'));
     }
 
-    public function showReb()
+    public function showItinerary()
     {
-        $rebData = Reimbursement::all();
-        return response()->json($rebData);
+        $itineraries = Itinerary::orderBy('created_at', 'desc')->get();
+        return view('data.itinerary', compact('itineraries'));
     }
 
-    public function showGpp()
+    public function showReimbursement()
     {
-        $gppData = GatePass::all();
-        return response()->json($gppData);
+        $reimbursements = Reimbursement::orderBy('created_at', 'desc')->get();
+        return view('data.reimbursement', compact('reimbursements'));
     }
 
-    public function showExc()
+    public function showGatePass()
     {
-        $excData = Excuse::all();
-        return response()->json($excData);
+        $gatePasses = GatePass::orderBy('created_at', 'desc')->get();
+        return view('data.gatepass', compact('gatePasses'));
+    }
+
+    public function showExcuse()
+    {
+        $excuses = Excuse::orderBy('created_at', 'desc')->get();
+        return view('data.excuse', compact('excuses'));
     }
 }

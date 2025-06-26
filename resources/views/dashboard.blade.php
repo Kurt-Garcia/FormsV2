@@ -22,63 +22,83 @@
                 
                 <!-- Attendance Form Card (Opens in Modal) -->
                 <div class="col-md-4 mb-4">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#attendanceFormModal" class="card form-card text-decoration-none">
+                    <div class="card form-card">
                         <div class="card-body">
                             <div class="icon-container bg-primary text-dark rounded-circle mb-3 mx-auto">
                                 <i class="bi bi-calendar-check text-white"></i>
                             </div>
                             <h5 class="card-title text-center">Attendance Form</h5>
+                            <div class="d-grid gap-2">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#attendanceFormModal" class="btn btn-primary btn-sm">Create New</a>
+                                <a href="{{ route('data.attendance') }}" class="btn btn-outline-primary btn-sm">View Data</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
     
                 <!-- Itinerary Form Card (Opens in Modal) -->
                 <div class="col-md-4 mb-4">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#itineraryFormModal" class="card form-card text-decoration-none">
+                    <div class="card form-card">
                         <div class="card-body">
                             <div class="icon-container bg-info text-dark rounded-circle mb-3 mx-auto">
                                 <i class="bi bi-geo-alt text-white"></i> <!-- White icon -->
                             </div>
                             <h5 class="card-title text-center">Itinerary Form</h5>
+                            <div class="d-grid gap-2">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#itineraryFormModal" class="btn btn-info btn-sm">Create New</a>
+                                <a href="{{ route('data.itinerary') }}" class="btn btn-outline-info btn-sm">View Data</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
     
                 <!-- Reimbursement Form Card (Opens in Modal) -->
                 <div class="col-md-4 mb-4">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#reimbursementFormModal" class="card form-card text-decoration-none">
+                    <div class="card form-card">
                         <div class="card-body">
                             <div class="icon-container bg-success text-dark rounded-circle mb-3 mx-auto">
                                 <i class="bi bi-cash-coin text-white"></i> <!-- White icon -->
                             </div>
                             <h5 class="card-title text-center">Reimbursement Form</h5>
+                            <div class="d-grid gap-2">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#reimbursementFormModal" class="btn btn-success btn-sm">Create New</a>
+                                <a href="{{ route('data.reimbursement') }}" class="btn btn-outline-success btn-sm">View Data</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
 
                 <!-- Gate Pass Form Card (Opens in Modal) -->
                 <div class="col-md-4 mb-4">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#gatePassFormModal" class="card form-card text-decoration-none">
+                    <div class="card form-card">
                         <div class="card-body">
                             <div class="icon-container bg-warning text-dark rounded-circle mb-3 mx-auto">
                                 <i class="bi bi-door-open text-white"></i> <!-- White icon -->
                             </div>
                             <h5 class="card-title text-center">Gate Pass Form</h5>
+                            <div class="d-grid gap-2">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#gatePassFormModal" class="btn btn-warning btn-sm">Create New</a>
+                                <a href="{{ route('data.gatepass') }}" class="btn btn-outline-warning btn-sm">View Data</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <!-- Excuse Form Card (Opens in Modal) -->
                 <div class="col-md-4 mb-4">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#excuseFormModal" class="card form-card text-decoration-none">
+                    <div class="card form-card">
                         <div class="card-body">
                             <div class="icon-container bg-danger text-dark rounded-circle mb-3 mx-auto">
                                 <i class="bi bi-person-x text-white"></i> <!-- White icon -->
                             </div>
                             <h5 class="card-title text-center">Excuse Form</h5>
+                            <div class="d-grid gap-2">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#excuseFormModal" class="btn btn-danger btn-sm">Create New</a>
+                                <a href="{{ route('data.excuse') }}" class="btn btn-outline-danger btn-sm">View Data</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
 
