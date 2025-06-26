@@ -89,5 +89,4 @@ class FormController extends Controller{
         return back()->with('success', 'Excuse submitted successfully!');
     }
 
-
 }
