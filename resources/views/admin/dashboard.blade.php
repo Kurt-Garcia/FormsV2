@@ -94,7 +94,7 @@
 
         <!-- Quick Actions -->
         <div class="row g-4">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="admin-card">
                     <div class="admin-card-header">
                         <h4><i class="bi bi-clock-history"></i> Pending Requests</h4>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="admin-card">
                     <div class="admin-card-header">
                         <h4><i class="bi bi-archive"></i> All Records</h4>
@@ -122,6 +122,26 @@
                             <i class="bi bi-table"></i>
                             View All Records
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="admin-card user-management-card">
+                    <div class="admin-card-header">
+                        <h4><i class="bi bi-people-fill"></i> User Management</h4>
+                        <p>Manage users and administrators</p>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ route('admin.users') }}" class="btn btn-success btn-lg">
+                                <i class="bi bi-people"></i>
+                                Manage Users
+                            </a>
+                            <a href="{{ route('admin.users.create') }}" class="btn btn-outline-success">
+                                <i class="bi bi-person-plus"></i>
+                                Add New User/Admin
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,6 +268,14 @@
     transform: translateY(-5px);
 }
 
+.user-management-card {
+    border-left: 4px solid #27ae60;
+}
+
+.user-management-card:hover {
+    box-shadow: 0 8px 30px rgba(39, 174, 96, 0.2);
+}
+
 .admin-card-header {
     padding: 2rem 2rem 1rem;
     border-bottom: 1px solid #ecf0f1;
@@ -284,6 +312,24 @@
 .btn-secondary {
     background: linear-gradient(45deg, #95a5a6, #7f8c8d);
     border: none;
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #27ae60, #229954);
+    border: none;
+    color: white;
+}
+
+.btn-outline-success {
+    border: 2px solid #27ae60;
+    color: #27ae60;
+    background: transparent;
+}
+
+.btn-outline-success:hover {
+    background: #27ae60;
+    color: white;
+    border-color: #27ae60;
 }
 
 .btn-lg:hover {

@@ -37,6 +37,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/all-records', [AdminController::class, 'allRecords'])->name('all-records');
         Route::post('/approve/{type}/{id}', [AdminController::class, 'approve'])->name('approve');
         Route::post('/decline/{type}/{id}', [AdminController::class, 'decline'])->name('decline');
+        
+        // User management routes
+        Route::get('/users', [AdminController::class, 'manageUsers'])->name('users');
+        Route::get('/users/create', [AdminController::class, 'createUser'])->name('users.create');
+        Route::post('/users/store', [AdminController::class, 'storeUser'])->name('users.store');
+        Route::delete('/users/{user}', [AdminController::class, 'deleteUser'])->name('users.delete');
     });
 
     // Data listing routes - accessible by admin only
