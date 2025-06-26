@@ -15,6 +15,14 @@
     @extends('layouts.app')
 
     @section('content')
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
         <!-- Hero Section -->
         <div class="hero-section">
             <div class="container">
@@ -56,7 +64,11 @@
                             <p class="card-description">Record daily attendance and track work hours</p>
                             <div class="card-actions">
                                 <button class="btn-primary">Create New</button>
-                                <a href="{{ route('data.attendance') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                @auth
+                                    @if(Auth::user()->role === 'admin')
+                                        <a href="{{ route('data.attendance') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                         <div class="card-pattern"></div>
@@ -74,7 +86,11 @@
                             <p class="card-description">Plan and document business travel schedules</p>
                             <div class="card-actions">
                                 <button class="btn-primary">Create New</button>
-                                <a href="{{ route('data.itinerary') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                @auth
+                                    @if(Auth::user()->role === 'admin')
+                                        <a href="{{ route('data.itinerary') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                         <div class="card-pattern"></div>
@@ -92,7 +108,11 @@
                             <p class="card-description">Submit expense claims and reimbursement requests</p>
                             <div class="card-actions">
                                 <button class="btn-primary">Create New</button>
-                                <a href="{{ route('data.reimbursement') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                @auth
+                                    @if(Auth::user()->role === 'admin')
+                                        <a href="{{ route('data.reimbursement') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                         <div class="card-pattern"></div>
@@ -110,7 +130,11 @@
                             <p class="card-description">Request permission for entry and exit</p>
                             <div class="card-actions">
                                 <button class="btn-primary">Create New</button>
-                                <a href="{{ route('data.gatepass') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                @auth
+                                    @if(Auth::user()->role === 'admin')
+                                        <a href="{{ route('data.gatepass') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                         <div class="card-pattern"></div>
@@ -128,7 +152,11 @@
                             <p class="card-description">Submit absence requests and leave applications</p>
                             <div class="card-actions">
                                 <button class="btn-primary">Create New</button>
-                                <a href="{{ route('data.excuse') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                @auth
+                                    @if(Auth::user()->role === 'admin')
+                                        <a href="{{ route('data.excuse') }}" class="btn-secondary" onclick="event.stopPropagation();">View Records</a>
+                                    @endif
+                                @endauth
                             </div>
                         </div>
                         <div class="card-pattern"></div>
