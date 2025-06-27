@@ -15,17 +15,17 @@ class AdminUserSeeder extends Seeder
     {
         // Create admin user
         User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@formsv2.com',
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('admin123'),
             'role' => 'admin',
         ]);
 
         // Create sample regular user
         User::create([
-            'name' => 'John Doe',
-            'email' => 'user@formsv2.com',
-            'password' => Hash::make('user123'),
+            'name' => 'Monkey D. Luffy',
+            'email' => 'pirateKing.com',
+            'password' => Hash::make('admin123'),
             'role' => 'user',
         ]);
     }
